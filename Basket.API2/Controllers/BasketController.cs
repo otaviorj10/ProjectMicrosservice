@@ -31,6 +31,12 @@ namespace Basket.API2.Controllers
         [HttpPost]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody] ShoppingCart basket)
         {
+            foreach (var item in basket.Items)
+            {
+
+            }
+
+
             return Ok(await _repository.UpdateBasket(basket));
         }
 
